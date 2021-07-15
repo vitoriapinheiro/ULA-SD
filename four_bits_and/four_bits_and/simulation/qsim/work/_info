@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus/four_bits_and/simulation/qsim
+vfour_bits_and
+Z1 !s110 1626311425
+!i10b 1
+!s100 gjgRQn`H:kL>HZ3cE?M;f2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IOmh_f]bn;IT4fL:=C5bCE2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1626311424
+Z5 8four_bits_and.vo
+Z6 Ffour_bits_and.vo
+!i122 0
+L0 32 266
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1626311425.000000
+Z9 !s107 four_bits_and.vo|
+Z10 !s90 -work|work|four_bits_and.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vfour_bits_and_vlg_vec_tst
+R1
+!i10b 1
+!s100 CjLeKJEOd49;:1BCa;AdN1
+R2
+Idfa^eKECGOoFJ0oJci?fY1
+R3
+R0
+w1626311423
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 1
+L0 30 452
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+vhard_block
+R1
+!i10b 1
+!s100 amIQlSj2G`:j3;IaANZX_1
+R2
+IfZ^>W7YfOZU];gPTJki@32
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 299 34
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

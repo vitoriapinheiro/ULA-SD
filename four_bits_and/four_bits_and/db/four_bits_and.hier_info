@@ -1,0 +1,15 @@
+|four_bits_and
+F[3] <= and_3.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= and_2.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= and_1.DB_MAX_OUTPUT_PORT_TYPE
+F[0] <= and_0.DB_MAX_OUTPUT_PORT_TYPE
+B[3] => and_3.IN0
+B[2] => and_2.IN0
+B[1] => and_1.IN0
+B[0] => and_0.IN0
+A[3] => and_3.IN1
+A[2] => and_2.IN1
+A[1] => and_1.IN1
+A[0] => and_0.IN1
+
+

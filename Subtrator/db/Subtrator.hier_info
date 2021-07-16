@@ -1,0 +1,246 @@
+|Subtrator
+S_SINAL <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A_SINAL => inst5.IN0
+A_SINAL => Complemento24Bits:inst10.B_SINAL
+A[0] => magnitudeComparator:inst3.A[0]
+A[0] => Complemento24Bits:inst10.B[0]
+A[1] => magnitudeComparator:inst3.A[1]
+A[1] => Complemento24Bits:inst10.B[1]
+A[2] => magnitudeComparator:inst3.A[2]
+A[2] => Complemento24Bits:inst10.B[2]
+A[3] => magnitudeComparator:inst3.A[3]
+A[3] => Complemento24Bits:inst10.B[3]
+B[0] => magnitudeComparator:inst3.B[0]
+B[0] => Complemento24Bits:inst11.B[0]
+B[1] => magnitudeComparator:inst3.B[1]
+B[1] => Complemento24Bits:inst11.B[1]
+B[2] => magnitudeComparator:inst3.B[2]
+B[2] => Complemento24Bits:inst11.B[2]
+B[3] => magnitudeComparator:inst3.B[3]
+B[3] => Complemento24Bits:inst11.B[3]
+B_SINAL => inst.IN0
+CA[0] <= Complemento24Bits:inst10.C[0]
+CA[1] <= Complemento24Bits:inst10.C[1]
+CA[2] <= Complemento24Bits:inst10.C[2]
+CA[3] <= Complemento24Bits:inst10.C[3]
+CB[0] <= Complemento24Bits:inst11.C[0]
+CB[1] <= Complemento24Bits:inst11.C[1]
+CB[2] <= Complemento24Bits:inst11.C[2]
+CB[3] <= Complemento24Bits:inst11.C[3]
+S[0] <= Complemento25Bits:inst9.C[0]
+S[1] <= Complemento25Bits:inst9.C[1]
+S[2] <= Complemento25Bits:inst9.C[2]
+S[3] <= Complemento25Bits:inst9.C[3]
+S[4] <= Complemento25Bits:inst9.C[4]
+
+
+|Subtrator|magnitudeComparator:inst3
+ehMaior <= AgreaterthanB:inst.a_greater_than_b
+A[0] => AgreaterthanB:inst.A[0]
+A[0] => AlessthanB:inst1.A[0]
+A[0] => AequalsB:inst2.A[0]
+A[1] => AgreaterthanB:inst.A[1]
+A[1] => AlessthanB:inst1.A[1]
+A[1] => AequalsB:inst2.A[1]
+A[2] => AgreaterthanB:inst.A[2]
+A[2] => AlessthanB:inst1.A[2]
+A[2] => AequalsB:inst2.A[2]
+A[3] => AgreaterthanB:inst.A[3]
+A[3] => AlessthanB:inst1.A[3]
+A[3] => AequalsB:inst2.A[3]
+B[0] => AgreaterthanB:inst.B[0]
+B[0] => AlessthanB:inst1.B[0]
+B[0] => AequalsB:inst2.B[0]
+B[1] => AgreaterthanB:inst.B[1]
+B[1] => AlessthanB:inst1.B[1]
+B[1] => AequalsB:inst2.B[1]
+B[2] => AgreaterthanB:inst.B[2]
+B[2] => AlessthanB:inst1.B[2]
+B[2] => AequalsB:inst2.B[2]
+B[3] => AgreaterthanB:inst.B[3]
+B[3] => AlessthanB:inst1.B[3]
+B[3] => AequalsB:inst2.B[3]
+ehMenor <= AlessthanB:inst1.a_less_than_b
+ehIgual <= AequalsB:inst2.a_equals_b
+
+
+|Subtrator|magnitudeComparator:inst3|AgreaterthanB:inst
+a_greater_than_b <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst14.IN0
+A[1] => inst11.IN2
+A[1] => inst.IN0
+A[2] => inst3.IN0
+A[2] => inst9.IN0
+A[3] => inst6.IN0
+A[3] => inst4.IN0
+B[0] => inst16.IN0
+B[1] => inst12.IN0
+B[1] => inst.IN1
+B[2] => inst3.IN1
+B[2] => inst10.IN0
+B[3] => inst8.IN0
+B[3] => inst4.IN1
+
+
+|Subtrator|magnitudeComparator:inst3|AlessthanB:inst1
+a_less_than_b <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst16.IN0
+A[1] => inst12.IN0
+A[1] => inst.IN0
+A[2] => inst3.IN0
+A[2] => inst10.IN0
+A[3] => inst8.IN0
+A[3] => inst4.IN0
+B[0] => inst14.IN1
+B[1] => inst11.IN3
+B[1] => inst.IN1
+B[2] => inst3.IN1
+B[2] => inst9.IN1
+B[3] => inst6.IN1
+B[3] => inst4.IN1
+
+
+|Subtrator|magnitudeComparator:inst3|AequalsB:inst2
+a_equals_b <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst3.IN0
+A[1] => inst2.IN0
+A[2] => inst1.IN0
+A[3] => inst.IN0
+B[0] => inst3.IN1
+B[1] => inst2.IN1
+B[2] => inst1.IN1
+B[3] => inst.IN1
+
+
+|Subtrator|Complemento24Bits:inst10
+C[0] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+B_SINAL => inst19.IN0
+B_SINAL => inst17.IN0
+B_SINAL => inst22.IN0
+B_SINAL => inst25.IN0
+B_SINAL => inst28.IN0
+B[0] => inst1.IN0
+B[0] => inst18.IN1
+B[1] => inst2.IN0
+B[1] => inst21.IN1
+B[2] => inst3.IN0
+B[2] => inst24.IN1
+B[3] => inst4.IN0
+B[3] => inst27.IN1
+
+
+|Subtrator|Complemento24Bits:inst11
+C[0] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+B_SINAL => inst19.IN0
+B_SINAL => inst17.IN0
+B_SINAL => inst22.IN0
+B_SINAL => inst25.IN0
+B_SINAL => inst28.IN0
+B[0] => inst1.IN0
+B[0] => inst18.IN1
+B[1] => inst2.IN0
+B[1] => inst21.IN1
+B[2] => inst3.IN0
+B[2] => inst24.IN1
+B[3] => inst4.IN0
+B[3] => inst27.IN1
+
+
+|Subtrator|Complemento25Bits:inst9
+C[0] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+B_SINAL => inst19.IN0
+B_SINAL => inst17.IN0
+B_SINAL => inst22.IN0
+B_SINAL => inst25.IN0
+B_SINAL => inst28.IN0
+B_SINAL => inst31.IN0
+B[0] => inst1.IN0
+B[0] => inst18.IN1
+B[1] => inst2.IN0
+B[1] => inst21.IN1
+B[2] => inst3.IN0
+B[2] => inst24.IN1
+B[3] => inst4.IN0
+B[3] => inst27.IN1
+B[4] => inst6.IN0
+B[4] => inst30.IN1
+
+
+|Subtrator|FullAdder:inst8
+S[0] <= FullAdder1BIT:inst.S
+S[1] <= FullAdder1BIT:inst1.S
+S[2] <= FullAdder1BIT:inst3.S
+S[3] <= FullAdder1BIT:inst2.S
+S[4] <= FullAdder1BIT:inst2.Cout
+A[0] => FullAdder1BIT:inst.A
+A[1] => FullAdder1BIT:inst1.A
+A[2] => FullAdder1BIT:inst3.A
+A[3] => FullAdder1BIT:inst2.A
+B[0] => FullAdder1BIT:inst.B
+B[1] => FullAdder1BIT:inst1.B
+B[2] => FullAdder1BIT:inst3.B
+B[3] => FullAdder1BIT:inst2.B
+
+
+|Subtrator|FullAdder:inst8|FullAdder1BIT:inst
+S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst4.IN0
+A => inst6.IN0
+A => inst7.IN0
+Cin => inst.IN0
+Cin => inst8.IN0
+B => inst.IN1
+B => inst6.IN1
+B => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Subtrator|FullAdder:inst8|FullAdder1BIT:inst1
+S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst4.IN0
+A => inst6.IN0
+A => inst7.IN0
+Cin => inst.IN0
+Cin => inst8.IN0
+B => inst.IN1
+B => inst6.IN1
+B => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Subtrator|FullAdder:inst8|FullAdder1BIT:inst3
+S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst4.IN0
+A => inst6.IN0
+A => inst7.IN0
+Cin => inst.IN0
+Cin => inst8.IN0
+B => inst.IN1
+B => inst6.IN1
+B => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Subtrator|FullAdder:inst8|FullAdder1BIT:inst2
+S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst4.IN0
+A => inst6.IN0
+A => inst7.IN0
+Cin => inst.IN0
+Cin => inst8.IN0
+B => inst.IN1
+B => inst6.IN1
+B => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
